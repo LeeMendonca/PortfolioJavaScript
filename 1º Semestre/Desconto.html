@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+    <script>
+        function precoComDesconto() {
+            const preco = parseFloat(prompt("Digite o preço do produto:"));
+            const desconto = preco * 0.9;
+
+            console.log(`Preço original: ${preco}`);
+            console.log(`Preço com 10% de desconto: ${desconto.toFixed(2)}`);
+            document.getElementById("saida").innerHTML = `Preço original: ${preco}<br>Preço com 10% de desconto: ${desconto.toFixed(2)}`;
+            alert(`Preço com desconto: ${desconto.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body onload="precoComDesconto()">
+    <div id="saida"></div>
+</body>
+</html>

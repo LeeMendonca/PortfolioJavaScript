@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function asyncCounter() {
+            for (let i = 1; i <= 5; i++) {
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                console.log(i);
+            }
+        }
+
+        asyncCounter();
+
+    </script>
+</body>
+</html>

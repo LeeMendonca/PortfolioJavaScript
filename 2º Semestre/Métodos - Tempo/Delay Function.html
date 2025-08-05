@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        async function delayFunction(name) {
+            await new Promise(resolve => setTimeout(resolve, 2000));
+             console.log(`Função ${name} concluída`);
+        }
+
+        async function chainDelays() {
+            await delayFunction("A");
+            await delayFunction("B");
+            await delayFunction("C");
+        }
+
+        chainDelays();
+
+    </script>
+</body>
+</html>

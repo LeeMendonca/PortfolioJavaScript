@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 3 - Exercício 10</title>
+        <script>
+
+        /*10. Criar uma função chamada busca que recebe um array e uma função de callback, e retorna o primeiro elemento do array que atende a uma determinada condição definida pela função de call-back (que retorna verdade se o numero for par), caso contrário retorna undefined.*/
+        
+        function busca(array, callback) {
+            return array.find(callback);
+        }
+
+        const numeros = [1, 3, 5, 8, 10];
+
+        const primeiroPar = busca(numeros, (n) => n%2 == 0);
+        console.log(primeiroPar);
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 6</title>
+        <script>
+
+        /* 6. Criar uma função chamada multiply que recebe dois números e um callback. A função deve multiplicar os dois números e passar o resultado para o callback. */
+        
+        function multiply(n1, n2, callback) {
+            const multiplicar = n1 * n2;
+            return callback(multiplicar)
+        };
+
+        function mostrarResultado(resultado) {
+            return `O resultado é: ${resultado}`;
+        }
+
+        console.log(multiply(7, 10, mostrarResultado));
+        
+        </script>
+    </head>
+</html>

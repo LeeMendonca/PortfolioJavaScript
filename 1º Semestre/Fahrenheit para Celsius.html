@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit para Celsius</title>
+    <script>
+        function fahrenheitParaCelsius() {
+            const fahrenheit = parseFloat(prompt("Digite a temperatura em Fahrenheit:"));
+            const celsius = ((fahrenheit - 32) * 5) / 9;
+
+            console.log(`Temperatura em Fahrenheit: ${fahrenheit}`);
+            console.log(`Temperatura em Celsius: ${celsius.toFixed(2)}`);
+            document.getElementById("saida").innerHTML = `Temperatura em Fahrenheit: ${fahrenheit}<br>Temperatura em Celsius: ${celsius.toFixed(2)}`;
+            alert(`Temperatura em Celsius: ${celsius.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body onload="fahrenheitParaCelsius()">
+    <div id="saida"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 2</title>
+        <script>
+
+        /* 2. Defina uma função que receba uma função e retorne uma nova função que executa a função original apenas um número limitado de vezes. */
+
+        function A(B) { // Função original.
+            let call = 0;
+
+            return function C(titulo) { // essa função é chamada indefinidamente.
+                if (call <3) { // if chama uma vez.
+                    B(titulo);
+                    call++; // incrementa para a próxima chamada da função.
+                }
+            }
+        } 
+
+        function B(nome) { // o que é chamado a cada repetição da função C.
+            console.log("Jesus");
+        }
+
+        const C = A(B); // cria a função C (uma variável), que retorna A(B).
+        // permite o acesso à função, ou não haveria como chamá-la.
+        C("Estrela da Manhã");
+        C("Príncipe da Paz");
+        C("Grande El Shaddai");
+
+        </script>
+    </head>
+</html>

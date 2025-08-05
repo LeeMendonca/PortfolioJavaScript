@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 1</title>
+        <script>
+
+        /* 1. Defina função que recebe dois números e uma função callcbak como argumentos. Ela calcula a
+soma dos dois números e passa o resultado para a função de callback, que é chamada com o resultado
+como argumento. */
+
+        function calcularSoma(a, b, callback) {
+            var resultado = a + b;
+            callback(resultado);
+        }
+
+        function mostrarResultado(resultado) {
+            alert("O resultado é: " + resultado);
+        }
+
+        calcularSoma(5, 10, mostrarResultado);
+
+        </script>
+    </head>
+</html>

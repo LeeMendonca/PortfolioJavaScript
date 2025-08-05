@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anterior e Posterior</title>
+    <script>
+        function numeroAnteriorPosterior() {
+            const numero = parseInt(prompt("Digite um número:"));
+            const anterior = numero - 1;
+            const posterior = numero + 1;
+
+            console.log(`Número digitado: ${numero}`);
+            console.log(`Número anterior: ${anterior}`);
+            console.log(`Número posterior: ${posterior}`);
+            document.getElementById("saida").innerHTML = `Número digitado: ${numero}<br>Número anterior: ${anterior}<br>Número posterior: ${posterior}`;
+            alert(`Anterior: ${anterior}, Posterior: ${posterior}`);
+        }
+    </script>
+</head>
+<body onload="numeroAnteriorPosterior()">
+    <div id="saida"></div>
+</body>
+</html>

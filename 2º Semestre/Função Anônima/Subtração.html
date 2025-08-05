@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 8</title>
+        <script>
+
+        /* 8. Defina uma função anônima que seja passada como argumento para outra função */
+
+        function executarOperacao(operacao, a, b) {
+            return operacao(a, b);
+        }
+
+        const resultado = executarOperacao(function(x, y) { 
+            return x - y; 
+        }, 10, 4);
+
+        console.log(resultado);
+
+        /* Uma função anônima é necessariamente atribuida a uma variável, ou imediatamente chamada, ou usa arrows. */
+
+        </script>
+    </head>
+</html>

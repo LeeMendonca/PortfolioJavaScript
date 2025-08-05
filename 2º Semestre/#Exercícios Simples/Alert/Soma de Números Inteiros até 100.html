@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 1 - Exercício 11</title>
+        <script>
+
+        /* Escrever um programa Javascript apresenta o total da soma dos 100 primeiros números inteiros,
+        representados pela sequência 1+2+3+4+5+6+7+...+97+98+99+100. */
+        
+        // Usando a fórmula para somatório
+        formula = (100 * (100+1))/2;
+        alert("Calculando pela fórmula: " + formula);
+
+        // Usando laço
+        let soma = 0;
+
+        for (let i=1; i<=100; i++) {
+            soma += i;
+        }
+
+        alert("Calculando com laço de repetição: " + soma);
+
+        </script>
+    </head>
+</html>

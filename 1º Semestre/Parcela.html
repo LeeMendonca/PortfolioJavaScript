@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcelas</title>
+    <script>
+        function calcularParcelas() {
+            const preco = parseFloat(prompt("Digite o valor do produto:"));
+            const parcela = preco / 4;
+
+            console.log(`Preço total: ${preco}`);
+            console.log(`Valor de cada parcela: ${parcela.toFixed(2)}`);
+            document.getElementById("saida").innerHTML = `Preço total: ${preco}<br>Valor de cada parcela: ${parcela.toFixed(2)}`;
+            alert(`Valor de cada parcela: ${parcela.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body onload="calcularParcelas()">
+    <div id="saida"></div>
+</body>
+</html>

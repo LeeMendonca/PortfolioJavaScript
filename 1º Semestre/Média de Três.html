@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+    <script>
+        function calcularMedia() {
+            const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+            const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+            const nota3 = parseFloat(prompt("Digite a terceira nota:"));
+            const media = (nota1 + nota2 + nota3) / 3;
+
+            console.log(`Notas: ${nota1}, ${nota2}, ${nota3}`);
+            console.log(`Média: ${media.toFixed(2)}`);
+            document.getElementById("saida").innerHTML = `Notas: ${nota1}, ${nota2}, ${nota3}<br>Média: ${media.toFixed(2)}`;
+            alert(`Média: ${media.toFixed(2)}`);
+        }
+    </script>
+</head>
+<body onload="calcularMedia()">
+    <div id="saida"></div>
+</body>
+</html>

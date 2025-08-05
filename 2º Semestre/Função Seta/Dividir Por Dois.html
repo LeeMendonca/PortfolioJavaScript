@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 10</title>
+        <script>
+
+        /* 10. Defina uma função seta que seja passada como argumento para outra função. */
+
+        const funcaoSeta = (x,y) => {
+            return x*y;
+        };
+
+        const dividirPorDois = function(f) {
+            const resultado = f(4, 5); // chama a função
+            return resultado/2;
+        };
+        
+        console.log(dividirPorDois(funcaoSeta));
+
+        </script>
+    </head>
+</html>

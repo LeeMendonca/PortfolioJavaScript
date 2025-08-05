@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário com Aumento</title>
+    <script>
+        function calcularAumento() {
+            const salarioAtual = parseFloat(prompt("Digite o salário atual:"));
+            const porcentagem = parseFloat(prompt("Digite a porcentagem de aumento (%):"));
+            const aumento = (salarioAtual * porcentagem) / 100;
+            const salarioFuturo = salarioAtual + aumento;
+
+            console.log(`Salário atual: ${salarioAtual}`);
+            console.log(`Porcentagem de aumento: ${porcentagem}%`);
+            console.log(`Salário futuro: ${salarioFuturo}`);
+            document.getElementById("saida").innerHTML = `Salário atual: ${salarioAtual}<br>Porcentagem de aumento: ${porcentagem}%<br>Salário futuro: ${salarioFuturo}`;
+            alert(`Salário futuro: ${salarioFuturo}`);
+        }
+    </script>
+</head>
+<body onload="calcularAumento()">
+    <div id="saida"></div>
+</body>
+</html>

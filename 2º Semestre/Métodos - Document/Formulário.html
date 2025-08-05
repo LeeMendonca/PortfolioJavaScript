@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unidade 4 - Exercício 2</title>
+    <style>
+        table, td, th { border: 1px solid; padding: 5px; }
+        #formulario { display: none; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <table id="tabela">
+        <tr><th>Nome</th><th>Email</th><th>Telefone</th><th>Ações</th></tr>
+    </table>
+
+    <button onclick="mostrarForm()">Adicionar</button>
+    
+    <div id="formulario">
+        Nome: <input id="nome"><br>
+        Email: <input id="email"><br>
+        Telefone: <input id="tel"><br>
+        <button onclick="add()">Salvar</button>
+        <button onclick="esconderForm()">Cancelar</button>
+    </div>
+
+    <script>
+        let contatos = [
+            {nome: "João", email: "joao@email.com", tel: "123-456-789"},
+            {nome: "Maria", email: "maria@email.com", tel: "987-654-321"}
+        ];
+
+        function mostrarForm() {
+            document.getElementById("formulario").style.display = 'block';
+        }
+        
+        function esconderForm() {
+            document.getElementById("formulario").style.display = 'none';
+            document.getElementById("nome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("tel").value = "";
+        }
+
+        function update() {
+            let tabela = document.getElementById("tabela");
+            while(tabela.rows.length > 1) tabela.deleteRow(1);
+            
+            contatos.forEach((c, i) => {
+                let row = tabela.insertRow();
+                row.insertCell(0).textContent = c.nome;
+                row.insertCell(1).textContent = c.email;
+                row.insertCell(2).textContent = c.tel;
+                row.insertCell(3).innerHTML = `
+                    <button onclick="editar(${i})">Editar</button>
+                    <button onclick="del(${i})">Excluir</button>
+                `;
+            });
+        }
+
+        function add() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let tel = document.getElementById("tel").value;
+            
+            if(nome && email && tel) {
+                contatos.push({nome, email, tel});
+                esconderForm();
+                update();
+            } else {
+                alert("Preencha todos os campos!");
+            }
+        }
+
+        function editar(i) {
+            let contato = contatos[i];
+            document.getElementById("nome").value = contato.nome;
+            document.getElementById("email").value = contato.email;
+            document.getElementById("tel").value = contato.tel;
+            contatos.splice(i, 1);
+            mostrarForm();
+            update();
+        }
+
+        function del(i) {
+            if(confirm("Excluir este contato?")) {
+                contatos.splice(i, 1);
+                update();
+            }
+        }
+
+        update();
+    </script>
+</body>
+</html>

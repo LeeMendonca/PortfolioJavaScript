@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 5</title>
+        <script>
+
+        /* 5. Definir um função de primeira classe que recebe duas funções como parâmetro e retorna a soma dos resultados dessas funções. */
+
+        const principal = function(funcaoA, funcaoB) {
+            return funcaoA() + funcaoB();
+        };
+
+        // funçãoA é a função, funçãoA() é o resultado da execução
+        // sem parênteses seria soma de objetos, o que não faz sentido
+
+        const funcaoA = function() {
+            return 3;
+        };
+
+        const funcaoB = function() {
+            return 5;
+        };
+
+        const resultado = principal(funcaoA, funcaoB);
+        console.log(resultado);
+
+        </script>
+    </head>
+</html>

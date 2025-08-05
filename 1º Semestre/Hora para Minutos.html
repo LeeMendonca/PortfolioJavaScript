@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo em Minutos</title>
+    <script>
+        function converterTempo() {
+            const horas = parseInt(prompt("Digite o tempo em horas:"));
+            const minutos = horas * 60;
+
+            console.log(`Tempo em horas: ${horas}`);
+            console.log(`Tempo em minutos: ${minutos}`);
+            document.getElementById("saida").innerHTML = `Tempo em horas: ${horas}<br>Tempo em minutos: ${minutos}`;
+            alert(`Tempo em minutos: ${minutos}`);
+        }
+    </script>
+</head>
+<body onload="converterTempo()">
+    <div id="saida"></div>
+</body>
+</html>

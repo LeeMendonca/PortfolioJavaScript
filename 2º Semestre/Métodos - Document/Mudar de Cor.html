@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidade 4 - Exercício 1</title>
+
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="titulo">Título</h1>
+    <button onclick="mudarCor()">Alterar cor</button>
+
+    <script>
+        function mudarCor() {
+            const titulo = document.getElementById("titulo");
+            
+            if (titulo.style.color === "red") {
+                titulo.style.color = "blue";
+            } else {
+                titulo.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>

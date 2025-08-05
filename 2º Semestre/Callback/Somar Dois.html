@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 3</title>
+        <script>
+
+        /* 3. Definir uma função de primeira classe que retorna outra função. */
+
+        const somar = function(a) {
+            return function(b) {
+                return a + b;
+            };
+        };
+
+        const somarDois = somar(2); // Retorna uma função
+        console.log(somarDois(5));
+
+        </script>
+    </head>
+</html>

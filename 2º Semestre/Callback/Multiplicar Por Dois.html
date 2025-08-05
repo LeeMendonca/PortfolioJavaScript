@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 2 - Exercício 4</title>
+        <script>
+
+        /* Definir uma função de primeira classe que recebe um valor e retorna uma função que multiplica esse valor por um número específico. */
+
+        const multiplicar = function(a) {
+            return function(b) {
+                return a * b;
+            };
+        };
+
+        const multiplicarPorDois = multiplicar(2);
+        console.log(multiplicarPorDois(5));
+
+        </script>
+    </head>
+</html>

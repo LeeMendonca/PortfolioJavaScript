@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 3 - Exercício 6 a 9</title>
+        <script>
+
+        // Considere o seguinte array para as próximas 4 questões:
+        const animais = ["gato", "cachorro", "elefante", "rato", "leao"];
+
+        // 6. Mostre os animais. Use o foreach.
+            animais.forEach((i) => console.log(`Animais: ${i}`));
+
+        // 7. Mostre os animais com mais de 5 letras. Use filter.
+            const maisDeCincoLetras = animais.filter((i) => i.length > 5);
+            console.log("Animais com mais de 5 letras:", maisDeCincoLetras);
+
+        // 8. Mostre o primeiro aninal com mais de 6 letras. Use find.
+            const primeiroAnimal = animais.find((i) => i.length > 6);
+            console.log("Primeiro animal com mais de 6 letras: ", primeiroAnimal);   
+
+        // 9. Mostre um array novo com os animais em maiúsculo.
+            const animaisMaiusculos = animais.map(animal => animal.toUpperCase());
+            console.log("Animais em maiúsculo: ", animaisMaiusculos);
+
+        </script>
+    </head>
+</html>

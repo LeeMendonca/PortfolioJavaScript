@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unidade 3 - Exercício 1 a 5</title>
+        <script>
+
+        /*Considere o seguinte array para as próximas 5 questões:*/
+        const numeros = [10, 20, 30, 40, 50];
+
+        // 1. Mostre a soma dos numeros do array. Use foreach.
+            let soma = 0;    
+            numeros.forEach((i) => soma += i);
+            console.log(`Soma: ${soma}\n`);
+
+        // 2. Mostre os numeros maiores que 25. Use foreach.
+            numeros.forEach((i) => {
+                if (i > 25) {
+                    console.log(`Maior do que 25: ${i}\n`);
+                };
+            });
+
+        // 3. Mostre os numeros pares. Use filter.
+            const pares = numeros.filter((i) => i%2==0);
+            console.log(`Pares: ${pares}\n`);
+
+        // 4. Mostre o primeiro numero maior que 25. Use find.
+            const elemento = numeros.find((i) => i>25);
+            console.log(`Primeiro elemento maior que 25: ${elemento}\n`);
+
+        // 5. Mostre um array novo com os numeros dobrados do array numeros. Use map.
+            const dobrados = numeros.map ((i => i*2));
+            console.log(`Dobrados: ${dobrados}\n`);
+        </script>
+    </head>
+</html>
